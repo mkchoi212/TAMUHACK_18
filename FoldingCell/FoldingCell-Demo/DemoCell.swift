@@ -13,6 +13,7 @@ protocol FoldingCellDelegate {
     func moveToNextCell()
     func rebook()
     func updateTable()
+    func arrived()
 }
 
 class DemoCell: FoldingCell {
@@ -20,6 +21,7 @@ class DemoCell: FoldingCell {
     @IBOutlet var openNumberLabel: UILabel!
     @IBOutlet var foodView: UIView!
     @IBOutlet var ticketView: UIView!
+    @IBOutlet var statusView: UIView!
     
     var delegate: FoldingCellDelegate?
 
@@ -50,12 +52,24 @@ extension DemoCell {
         UIView.transition(with: containerView, duration: 0.6, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: {
             let foodView =  self.containerView.subviews.filter{ $0.restorationIdentifier == "food" }.first!
             self.containerView.sendSubview(toBack: foodView)
-        }, completion: nil)
+        }, completion: { _ in
+            TemporaryAlert.show(image: .checkmark, title: "Order placed", message: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+                self.delegate?.moveToNextCell()
+            })
+        })
+    }
+    
+    @IBAction func finalButton(_: AnyObject) {
+        self.delegate?.arrived()
     }
     
     @IBAction func buttonHandler(_: AnyObject) {
-        print("tap!")
-        delegate?.moveToNextCell()
+        UIView.animate(withDuration: 0.5, animations: {
+            self.statusView.backgroundColor = #colorLiteral(red: 0, green: 0.5607843137, blue: 0, alpha: 1)
+        }) { (_) in
+            self.delegate?.moveToNextCell()
+        }
     }
     
     @IBAction func rebookFlight(_: AnyObject) {

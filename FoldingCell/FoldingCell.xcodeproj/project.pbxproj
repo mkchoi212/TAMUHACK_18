@@ -30,6 +30,30 @@
 		CA061E55201D5AAA00FF2A82 /* BaggageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA061E54201D5AAA00FF2A82 /* BaggageCell.xib */; };
 		CA606AE9201D20DD00C58D6A /* UberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA606AE8201D20DD00C58D6A /* UberCell.xib */; };
 		CA606AEB201D278800C58D6A /* TerminalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA606AEA201D278800C58D6A /* TerminalCell.xib */; };
+		CAC71DED201DE24D003FA97D /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DD9201DE24D003FA97D /* M13CheckboxExpandController.swift */; };
+		CAC71DEE201DE24D003FA97D /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DDA201DE24D003FA97D /* M13CheckboxSpiralController.swift */; };
+		CAC71DEF201DE24D003FA97D /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DDB201DE24D003FA97D /* M13CheckboxFadeController.swift */; };
+		CAC71DF0201DE24D003FA97D /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DDC201DE24D003FA97D /* M13CheckboxFlatController.swift */; };
+		CAC71DF1201DE24D003FA97D /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DDD201DE24D003FA97D /* M13CheckboxFillController.swift */; };
+		CAC71DF2201DE24D003FA97D /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DDE201DE24D003FA97D /* M13CheckboxStrokeController.swift */; };
+		CAC71DF3201DE24D003FA97D /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DDF201DE24D003FA97D /* M13CheckboxBounceController.swift */; };
+		CAC71DF4201DE24D003FA97D /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE0201DE24D003FA97D /* M13CheckboxDotController.swift */; };
+		CAC71DF5201DE24D003FA97D /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE2201DE24D003FA97D /* M13CheckboxPathGenerator.swift */; };
+		CAC71DF6201DE24D003FA97D /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE3201DE24D003FA97D /* M13CheckboxCheckPathGenerator.swift */; };
+		CAC71DF7201DE24D003FA97D /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE4201DE24D003FA97D /* M13CheckboxDisclosurePathGenerator.swift */; };
+		CAC71DF8201DE24D003FA97D /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE5201DE24D003FA97D /* M13CheckboxAddRemovePathGenerator.swift */; };
+		CAC71DF9201DE24D003FA97D /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE6201DE24D003FA97D /* M13CheckboxRadioPathGenerator.swift */; };
+		CAC71DFA201DE24D003FA97D /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE7201DE24D003FA97D /* M13Checkbox.swift */; };
+		CAC71DFB201DE24D003FA97D /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE8201DE24D003FA97D /* M13CheckboxAnimationGenerator.swift */; };
+		CAC71DFC201DE24D003FA97D /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DE9201DE24D003FA97D /* DefaultValues.swift */; };
+		CAC71DFD201DE24D003FA97D /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DEA201DE24D003FA97D /* M13CheckboxGestureRecognizer.swift */; };
+		CAC71DFE201DE24D003FA97D /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DEB201DE24D003FA97D /* M13CheckboxController.swift */; };
+		CAC71DFF201DE24D003FA97D /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71DEC201DE24D003FA97D /* M13Checkbox+IB.swift */; };
+		CAC71E01201E21C3003FA97D /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC71E00201E21C3003FA97D /* HomeCell.xib */; };
+		CAC71E03201E33FD003FA97D /* TemporaryAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71E02201E33FC003FA97D /* TemporaryAlert.swift */; };
+		CAC71E05201E347A003FA97D /* UIFont+sizeOfString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71E04201E347A003FA97D /* UIFont+sizeOfString.swift */; };
+		CAC71E07201E3513003FA97D /* TemporaryAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC71E06201E3513003FA97D /* TemporaryAlertViewController.swift */; };
+		CAC71E09201E402C003FA97D /* DoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAC71E08201E402C003FA97D /* DoneCell.xib */; };
 		CAE9ACD5201DB15B00E372B4 /* CanceledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE9ACD4201DB15B00E372B4 /* CanceledCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +128,30 @@
 		CA061E54201D5AAA00FF2A82 /* BaggageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaggageCell.xib; sourceTree = "<group>"; };
 		CA606AE8201D20DD00C58D6A /* UberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UberCell.xib; sourceTree = "<group>"; };
 		CA606AEA201D278800C58D6A /* TerminalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalCell.xib; sourceTree = "<group>"; };
+		CAC71DD9201DE24D003FA97D /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxExpandController.swift; sourceTree = "<group>"; };
+		CAC71DDA201DE24D003FA97D /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
+		CAC71DDB201DE24D003FA97D /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		CAC71DDC201DE24D003FA97D /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFlatController.swift; sourceTree = "<group>"; };
+		CAC71DDD201DE24D003FA97D /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFillController.swift; sourceTree = "<group>"; };
+		CAC71DDE201DE24D003FA97D /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		CAC71DDF201DE24D003FA97D /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxBounceController.swift; sourceTree = "<group>"; };
+		CAC71DE0201DE24D003FA97D /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxDotController.swift; sourceTree = "<group>"; };
+		CAC71DE2201DE24D003FA97D /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
+		CAC71DE3201DE24D003FA97D /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		CAC71DE4201DE24D003FA97D /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
+		CAC71DE5201DE24D003FA97D /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
+		CAC71DE6201DE24D003FA97D /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
+		CAC71DE7201DE24D003FA97D /* M13Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13Checkbox.swift; sourceTree = "<group>"; };
+		CAC71DE8201DE24D003FA97D /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
+		CAC71DE9201DE24D003FA97D /* DefaultValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
+		CAC71DEA201DE24D003FA97D /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
+		CAC71DEB201DE24D003FA97D /* M13CheckboxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxController.swift; sourceTree = "<group>"; };
+		CAC71DEC201DE24D003FA97D /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "M13Checkbox+IB.swift"; sourceTree = "<group>"; };
+		CAC71E00201E21C3003FA97D /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		CAC71E02201E33FC003FA97D /* TemporaryAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemporaryAlert.swift; sourceTree = "<group>"; };
+		CAC71E04201E347A003FA97D /* UIFont+sizeOfString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+sizeOfString.swift"; sourceTree = "<group>"; };
+		CAC71E06201E3513003FA97D /* TemporaryAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemporaryAlertViewController.swift; sourceTree = "<group>"; };
+		CAC71E08201E402C003FA97D /* DoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneCell.xib; sourceTree = "<group>"; };
 		CAE9ACD4201DB15B00E372B4 /* CanceledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanceledCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,9 +223,15 @@
 		9D57F31D1EDC7A6F0004599F /* FoldingCell-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				CAC71DD7201DE24D003FA97D /* Sources */,
+				CAC71E04201E347A003FA97D /* UIFont+sizeOfString.swift */,
+				CAC71E06201E3513003FA97D /* TemporaryAlertViewController.swift */,
+				CAC71E02201E33FC003FA97D /* TemporaryAlert.swift */,
 				9D57F31E1EDC7A6F0004599F /* AppDelegate.swift */,
 				9D57F3301EDC7AAD0004599F /* DemoCell.swift */,
 				9D57F32E1EDC7A850004599F /* MainTableViewController.swift */,
+				CAC71E00201E21C3003FA97D /* HomeCell.xib */,
+				CAC71E08201E402C003FA97D /* DoneCell.xib */,
 				CA606AE8201D20DD00C58D6A /* UberCell.xib */,
 				CAE9ACD4201DB15B00E372B4 /* CanceledCell.xib */,
 				CA061E50201D3B1B00FF2A82 /* RouteCell.xib */,
@@ -214,6 +268,48 @@
 				9DAA51571EDDBAD700DFC539 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAC71DD7201DE24D003FA97D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CAC71DD8201DE24D003FA97D /* Managers */,
+				CAC71DE1201DE24D003FA97D /* Paths */,
+				CAC71DE7201DE24D003FA97D /* M13Checkbox.swift */,
+				CAC71DE8201DE24D003FA97D /* M13CheckboxAnimationGenerator.swift */,
+				CAC71DE9201DE24D003FA97D /* DefaultValues.swift */,
+				CAC71DEA201DE24D003FA97D /* M13CheckboxGestureRecognizer.swift */,
+				CAC71DEB201DE24D003FA97D /* M13CheckboxController.swift */,
+				CAC71DEC201DE24D003FA97D /* M13Checkbox+IB.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CAC71DD8201DE24D003FA97D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CAC71DD9201DE24D003FA97D /* M13CheckboxExpandController.swift */,
+				CAC71DDA201DE24D003FA97D /* M13CheckboxSpiralController.swift */,
+				CAC71DDB201DE24D003FA97D /* M13CheckboxFadeController.swift */,
+				CAC71DDC201DE24D003FA97D /* M13CheckboxFlatController.swift */,
+				CAC71DDD201DE24D003FA97D /* M13CheckboxFillController.swift */,
+				CAC71DDE201DE24D003FA97D /* M13CheckboxStrokeController.swift */,
+				CAC71DDF201DE24D003FA97D /* M13CheckboxBounceController.swift */,
+				CAC71DE0201DE24D003FA97D /* M13CheckboxDotController.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CAC71DE1201DE24D003FA97D /* Paths */ = {
+			isa = PBXGroup;
+			children = (
+				CAC71DE2201DE24D003FA97D /* M13CheckboxPathGenerator.swift */,
+				CAC71DE3201DE24D003FA97D /* M13CheckboxCheckPathGenerator.swift */,
+				CAC71DE4201DE24D003FA97D /* M13CheckboxDisclosurePathGenerator.swift */,
+				CAC71DE5201DE24D003FA97D /* M13CheckboxAddRemovePathGenerator.swift */,
+				CAC71DE6201DE24D003FA97D /* M13CheckboxRadioPathGenerator.swift */,
+			);
+			path = Paths;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +475,9 @@
 				9D57F3291EDC7A6F0004599F /* LaunchScreen.storyboard in Resources */,
 				CA061E55201D5AAA00FF2A82 /* BaggageCell.xib in Resources */,
 				CA061E51201D3B1B00FF2A82 /* RouteCell.xib in Resources */,
+				CAC71E09201E402C003FA97D /* DoneCell.xib in Resources */,
 				CA061E53201D522B00FF2A82 /* RebookCell.xib in Resources */,
+				CAC71E01201E21C3003FA97D /* HomeCell.xib in Resources */,
 				9D57F3261EDC7A6F0004599F /* Assets.xcassets in Resources */,
 				CAE9ACD5201DB15B00E372B4 /* CanceledCell.xib in Resources */,
 				9D57F3241EDC7A6F0004599F /* Main.storyboard in Resources */,
@@ -420,8 +518,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC71DFE201DE24D003FA97D /* M13CheckboxController.swift in Sources */,
+				CAC71DED201DE24D003FA97D /* M13CheckboxExpandController.swift in Sources */,
+				CAC71DF9201DE24D003FA97D /* M13CheckboxRadioPathGenerator.swift in Sources */,
+				CAC71E05201E347A003FA97D /* UIFont+sizeOfString.swift in Sources */,
+				CAC71E07201E3513003FA97D /* TemporaryAlertViewController.swift in Sources */,
+				CAC71E03201E33FD003FA97D /* TemporaryAlert.swift in Sources */,
+				CAC71DF8201DE24D003FA97D /* M13CheckboxAddRemovePathGenerator.swift in Sources */,
+				CAC71DF0201DE24D003FA97D /* M13CheckboxFlatController.swift in Sources */,
 				9D57F32F1EDC7A850004599F /* MainTableViewController.swift in Sources */,
+				CAC71DEE201DE24D003FA97D /* M13CheckboxSpiralController.swift in Sources */,
+				CAC71DF2201DE24D003FA97D /* M13CheckboxStrokeController.swift in Sources */,
 				9D57F31F1EDC7A6F0004599F /* AppDelegate.swift in Sources */,
+				CAC71DFA201DE24D003FA97D /* M13Checkbox.swift in Sources */,
+				CAC71DF1201DE24D003FA97D /* M13CheckboxFillController.swift in Sources */,
+				CAC71DEF201DE24D003FA97D /* M13CheckboxFadeController.swift in Sources */,
+				CAC71DF3201DE24D003FA97D /* M13CheckboxBounceController.swift in Sources */,
+				CAC71DFD201DE24D003FA97D /* M13CheckboxGestureRecognizer.swift in Sources */,
+				CAC71DF5201DE24D003FA97D /* M13CheckboxPathGenerator.swift in Sources */,
+				CAC71DF7201DE24D003FA97D /* M13CheckboxDisclosurePathGenerator.swift in Sources */,
+				CAC71DF6201DE24D003FA97D /* M13CheckboxCheckPathGenerator.swift in Sources */,
+				CAC71DFB201DE24D003FA97D /* M13CheckboxAnimationGenerator.swift in Sources */,
+				CAC71DF4201DE24D003FA97D /* M13CheckboxDotController.swift in Sources */,
+				CAC71DFF201DE24D003FA97D /* M13Checkbox+IB.swift in Sources */,
+				CAC71DFC201DE24D003FA97D /* DefaultValues.swift in Sources */,
 				9D57F3311EDC7AAD0004599F /* DemoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

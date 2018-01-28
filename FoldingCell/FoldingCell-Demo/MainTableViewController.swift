@@ -26,7 +26,7 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     var currentIndex = 0
-    var cellCount = 6
+    var cellCount = 5
     
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
@@ -37,16 +37,20 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: kOpenCellHeight, right: 0)
+        self.tableView.contentInset = insets
     }
 
     private func setup() {
-      
+        tableView.register(UINib(nibName: "HomeCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         tableView.register(UINib(nibName: "UberCell", bundle: nil), forCellReuseIdentifier: "UberCell")
         tableView.register(UINib(nibName: "TerminalCell", bundle: nil), forCellReuseIdentifier: "TerminalCell")
         tableView.register(UINib(nibName: "RouteCell", bundle: nil), forCellReuseIdentifier: "RouteCell")
         tableView.register(UINib(nibName: "RebookCell", bundle: nil), forCellReuseIdentifier: "RebookCell")
         tableView.register(UINib(nibName: "BaggageCell", bundle: nil), forCellReuseIdentifier: "BaggageCell")
         tableView.register(UINib(nibName: "CanceledCell", bundle: nil), forCellReuseIdentifier: "CanceledCell")
+             tableView.register(UINib(nibName: "DoneCell", bundle: nil), forCellReuseIdentifier: "DoneCell")
 
         cellHeights = Array(repeating: kCloseCellHeight, count: kRowsCount)
         tableView.estimatedRowHeight = kCloseCellHeight
@@ -56,6 +60,12 @@ class MainTableViewController: UITableViewController {
 }
 
 extension MainTableViewController: FoldingCellDelegate {
+    func arrived() {
+        self.cellCount += 1
+        let newIdx = IndexPath(row: 5, section: 0)
+        tableView.insertRows(at: [newIdx], with: .bottom)
+    }
+    
     func updateTable() {
         UIView.animate(withDuration: 0.1) {
             self.tableView.beginUpdates()
@@ -76,6 +86,22 @@ extension MainTableViewController: FoldingCellDelegate {
         let indexPath = IndexPath(row: currentIndex, section: 0)
         let nextPath = IndexPath(row: currentIndex + 1, section: 0)
         let curCell = tableView.cellForRow(at: indexPath) as! FoldingCell
+        if indexPath.row == 4 {
+            let overlay = UIView(frame: curCell.foregroundView!.frame)
+            overlay.clipsToBounds = true
+            overlay.layer.cornerRadius = 10.0
+            overlay.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4911708048)
+            overlay.alpha = 0.0
+            curCell.addSubview(overlay)
+            
+            curCell.unfold(false, animated: true, completion: { _ in
+                UIView.animate(withDuration: 1.0, animations: {
+                    overlay.alpha = 1.0
+                }, completion: nil)
+            })
+            return
+        }
+        
         let nxtCell = tableView.cellForRow(at: nextPath) as! FoldingCell
         cellHeights[indexPath.row] = kCloseCellHeight
         cellHeights[indexPath.row + 1] = kOpenCellHeight
@@ -100,7 +126,7 @@ extension MainTableViewController: FoldingCellDelegate {
                     let indexPath = IndexPath(row: self.currentIndex, section: 0)
                     self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                     nxtCell.unfold(true, animated: true) {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
                             if self.currentIndex == 2 && self.rebookCellKey == "RouteCell" {
                                 let ticketIdx = IndexPath(row: self.currentIndex, section: 0)
                                 self.cellCount -= 1
@@ -137,19 +163,31 @@ extension MainTableViewController {
         }
         cell.delegate = self
         cell.number = indexPath.row
+        
+        if indexPath.row == 5 {
+            let frame = cell.frame
+            cell.frame = CGRect(x: 0, y: self.tableView.frame.height + 300, width: frame.width, height: frame.height)
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
+                cell.frame = frame
+            }, completion: nil)
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = FoldingCell()
         
-        if indexPath.row == 1 {
+        if indexPath.row == 0 {
+            cell = tableView.dequeueReusableCell(withIdentifier: "UberCell", for: indexPath) as! FoldingCell
+        } else if indexPath.row == 1 {
            cell = tableView.dequeueReusableCell(withIdentifier: "TerminalCell", for: indexPath) as! FoldingCell
         } else if indexPath.row == 2 {
             cell = tableView.dequeueReusableCell(withIdentifier: rebookCellKey, for: indexPath) as! FoldingCell
         } else if indexPath.row == 3 {
             cell = tableView.dequeueReusableCell(withIdentifier: "BaggageCell", for: indexPath) as! FoldingCell
-        } else {
-           cell = tableView.dequeueReusableCell(withIdentifier: "UberCell", for: indexPath) as! FoldingCell
+        } else if indexPath.row == 4 {
+           cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! FoldingCell
+        } else if indexPath.row == 5 {
+            cell = tableView.dequeueReusableCell(withIdentifier: "DoneCell", for: indexPath) as! FoldingCell
         }
         
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
@@ -163,7 +201,6 @@ extension MainTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         let cell = tableView.cellForRow(at: indexPath) as! FoldingCell
 
         if cell.isAnimating() {

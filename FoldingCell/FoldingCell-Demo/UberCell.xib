@@ -33,29 +33,30 @@
                         <rect key="frame" x="20" y="180" width="560" height="479"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dW3-TA-jR3" userLabel="FirstContainerView">
-                                <rect key="frame" x="0.0" y="0.0" width="560" height="165"/>
+                                <rect key="frame" x="0.0" y="0.0" width="560" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKm-PM-cqT" userLabel="bar">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="49"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0G-Dx-WK5">
                                                 <rect key="frame" x="14" y="10" width="38" height="29"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <state key="normal" image="burger"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3js-tA-Ilu">
                                                 <rect key="frame" x="517.5" y="0.0" width="30.5" height="49"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uber to Airport" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wor-lV-RTH">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="49"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="18"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.36470588240000001" green="0.29411764709999999" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.9137254901960784" green="0.92941176470588238" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Wor-lV-RTH" secondAttribute="trailing" id="1Si-e7-pEv"/>
                                             <constraint firstAttribute="bottom" secondItem="Wor-lV-RTH" secondAttribute="bottom" id="3Jk-BO-t9y"/>
@@ -76,13 +77,13 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="directions" translatesAutoresizingMaskIntoConstraints="NO" id="UYw-8f-fzu">
-                                        <rect key="frame" x="0.0" y="49" width="560" height="116"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iah-uber" translatesAutoresizingMaskIntoConstraints="NO" id="UYw-8f-fzu">
+                                        <rect key="frame" x="0.0" y="49" width="560" height="131"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.36470588240000001" green="0.29411764709999999" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.92941176470588238" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="165" id="0Ss-5W-7rE"/>
+                                    <constraint firstAttribute="height" constant="180" id="0Ss-5W-7rE"/>
                                     <constraint firstItem="UYw-8f-fzu" firstAttribute="leading" secondItem="dW3-TA-jR3" secondAttribute="leading" id="YCE-8P-3gE"/>
                                     <constraint firstItem="UYw-8f-fzu" firstAttribute="top" secondItem="yKm-PM-cqT" secondAttribute="bottom" id="Z7c-JT-6Br"/>
                                     <constraint firstAttribute="bottom" secondItem="UYw-8f-fzu" secondAttribute="bottom" id="cyB-20-OI2"/>
@@ -133,14 +134,14 @@
                                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="0.49546030410000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MSC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W74-o3-Bd3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NRG Stadium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W74-o3-Bd3">
                                                 <rect key="frame" x="0.0" y="24" width="247.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texas A&amp;M University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6k-vI-08D">
-                                                <rect key="frame" x="0.0" y="41" width="247.5" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Houston, TX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6k-vI-08D">
+                                                <rect key="frame" x="0.0" y="41.5" width="247.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                                                 <color key="textColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -168,14 +169,14 @@
                                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="0.49546030410000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easterwood Airport" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-Xd-y4n">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="George Bush Intercontinental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-Xd-y4n">
                                                 <rect key="frame" x="0.0" y="24" width="257.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terminal 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQe-Zo-Lkc">
-                                                <rect key="frame" x="0.0" y="41" width="257.5" height="14"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terminal A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQe-Zo-Lkc">
+                                                <rect key="frame" x="0.0" y="41.5" width="257.5" height="14"/>
                                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                                                 <color key="textColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -274,7 +275,7 @@
                                                 <color key="textColor" red="0.13725490200000001" green="0.13725490200000001" blue="0.13725490200000001" alpha="0.49546030410000003" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:40 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3v-Db-HF1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:03 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3v-Db-HF1">
                                                 <rect key="frame" x="0.0" y="24" width="256.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
                                                 <color key="textColor" red="0.20392156859999999" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -362,41 +363,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbh-hY-rau" userLabel="Foreground" customClass="RotatedView" customModule="FoldingCell">
                         <rect key="frame" x="20" y="7" width="560" height="165"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOL-eA-oYg" userLabel="LeftView">
-                                <rect key="frame" x="0.0" y="0.0" width="88" height="165"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aQ-on-DHK">
-                                        <rect key="frame" x="33.5" y="33.5" width="13.5" height="28"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="24"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.80086043070000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afv-x3-Ib9">
-                                        <rect key="frame" x="18" y="103" width="33" height="12"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RD4-Di-xWC">
-                                        <rect key="frame" x="18" y="122" width="56" height="15.5"/>
-                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.80434438340000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.36470588240000001" green="0.2901960784" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="RD4-Di-xWC" secondAttribute="bottom" constant="28" id="A5S-aI-WLN"/>
-                                    <constraint firstItem="4aQ-on-DHK" firstAttribute="centerY" secondItem="qOL-eA-oYg" secondAttribute="centerY" constant="-35" id="AyM-U5-gOz"/>
-                                    <constraint firstAttribute="bottom" secondItem="Afv-x3-Ib9" secondAttribute="bottom" constant="50" id="LAd-Ap-bb0"/>
-                                    <constraint firstAttribute="width" constant="88" id="Luf-Zs-nZd"/>
-                                    <constraint firstItem="RD4-Di-xWC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qOL-eA-oYg" secondAttribute="leading" id="Szq-PZ-Fkm"/>
-                                    <constraint firstItem="Afv-x3-Ib9" firstAttribute="leading" secondItem="qOL-eA-oYg" secondAttribute="leading" constant="18" id="Xsh-M3-UPl"/>
-                                    <constraint firstItem="4aQ-on-DHK" firstAttribute="centerX" secondItem="qOL-eA-oYg" secondAttribute="centerX" constant="-4" id="ccQ-g5-Sjg"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Afv-x3-Ib9" secondAttribute="trailing" constant="20" symbolic="YES" id="ffp-Bb-lLj"/>
-                                    <constraint firstAttribute="trailing" secondItem="RD4-Di-xWC" secondAttribute="trailing" constant="14" id="jaB-Gg-Smb"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dots" translatesAutoresizingMaskIntoConstraints="NO" id="bD0-GB-5Bh">
                                 <rect key="frame" x="108" y="32" width="8" height="42"/>
                                 <constraints>
@@ -411,14 +377,14 @@
                                     <constraint firstAttribute="height" constant="1" id="NJ9-34-oMa"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memorial Student Center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="1Kq-Dc-bbI" userLabel="W 85th St, New York, 10024">
-                                <rect key="frame" x="392.5" y="28" width="157.5" height="16.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NRG Stadium" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="1Kq-Dc-bbI" userLabel="W 85th St, New York, 10024">
+                                <rect key="frame" x="463.5" y="28" width="86.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easterwood Airport" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="z7S-2S-Bex" userLabel="W 85th St, New York, 10024">
-                                <rect key="frame" x="429" y="57" width="121" height="16.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IAH, Terminal A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="z7S-2S-Bex" userLabel="W 85th St, New York, 10024">
+                                <rect key="frame" x="454" y="57" width="96" height="16.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -436,7 +402,7 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10:40 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9u-1C-MSj">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11:03 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9u-1C-MSj">
                                                 <rect key="frame" x="0.0" y="37" width="70" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -485,6 +451,41 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view tag="-2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOL-eA-oYg" userLabel="LeftView">
+                                <rect key="frame" x="0.0" y="0.0" width="88" height="165"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aQ-on-DHK">
+                                        <rect key="frame" x="37" y="33" width="13.5" height="28"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RD4-Di-xWC">
+                                        <rect key="frame" x="18" y="122" width="56" height="15.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TODAY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afv-x3-Ib9">
+                                        <rect key="frame" x="20" y="102" width="33" height="12"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.92941176470588238" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RD4-Di-xWC" secondAttribute="bottom" constant="28" id="A5S-aI-WLN"/>
+                                    <constraint firstItem="4aQ-on-DHK" firstAttribute="centerY" secondItem="qOL-eA-oYg" secondAttribute="centerY" constant="-35" id="AyM-U5-gOz"/>
+                                    <constraint firstAttribute="bottom" secondItem="Afv-x3-Ib9" secondAttribute="bottom" constant="50" id="LAd-Ap-bb0"/>
+                                    <constraint firstAttribute="width" constant="88" id="Luf-Zs-nZd"/>
+                                    <constraint firstItem="RD4-Di-xWC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qOL-eA-oYg" secondAttribute="leading" id="Szq-PZ-Fkm"/>
+                                    <constraint firstItem="Afv-x3-Ib9" firstAttribute="leading" secondItem="qOL-eA-oYg" secondAttribute="leading" constant="18" id="Xsh-M3-UPl"/>
+                                    <constraint firstItem="4aQ-on-DHK" firstAttribute="centerX" secondItem="qOL-eA-oYg" secondAttribute="centerX" constant="-4" id="ccQ-g5-Sjg"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Afv-x3-Ib9" secondAttribute="trailing" constant="20" symbolic="YES" id="ffp-Bb-lLj"/>
+                                    <constraint firstAttribute="trailing" secondItem="RD4-Di-xWC" secondAttribute="trailing" constant="14" id="jaB-Gg-Smb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -531,11 +532,12 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="closeNumberLabel" destination="4aQ-on-DHK" id="c8o-Kt-Ucf"/>
-                <outlet property="containerView" destination="g4i-Ru-1sA" id="jnE-EX-eq8"/>
+                <outlet property="containerView" destination="g4i-Ru-1sA" id="nSj-Z3-w0n"/>
                 <outlet property="containerViewTop" destination="PoI-Ge-Sut" id="680-ag-yeh"/>
                 <outlet property="foregroundView" destination="mbh-hY-rau" id="ilk-fa-gyW"/>
                 <outlet property="foregroundViewTop" destination="Kbd-8Y-HRd" id="2u1-4X-SHz"/>
                 <outlet property="openNumberLabel" destination="Wor-lV-RTH" id="TLQ-VP-Vrf"/>
+                <outlet property="statusView" destination="qOL-eA-oYg" id="fNK-15-FXV"/>
             </connections>
             <point key="canvasLocation" x="34" y="-678.5"/>
         </tableViewCell>
@@ -543,8 +545,8 @@
     <resources>
         <image name="arrow" width="16" height="25"/>
         <image name="burger" width="38" height="29"/>
-        <image name="directions" width="1125" height="357"/>
         <image name="dots" width="14" height="84"/>
+        <image name="iah-uber" width="1125" height="406"/>
         <image name="photo" width="98" height="98"/>
         <image name="stars" width="97" height="17"/>
     </resources>
