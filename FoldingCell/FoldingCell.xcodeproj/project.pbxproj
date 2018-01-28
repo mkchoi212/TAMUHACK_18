@@ -30,6 +30,7 @@
 		CA061E55201D5AAA00FF2A82 /* BaggageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA061E54201D5AAA00FF2A82 /* BaggageCell.xib */; };
 		CA606AE9201D20DD00C58D6A /* UberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA606AE8201D20DD00C58D6A /* UberCell.xib */; };
 		CA606AEB201D278800C58D6A /* TerminalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA606AEA201D278800C58D6A /* TerminalCell.xib */; };
+		CAE9ACD5201DB15B00E372B4 /* CanceledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE9ACD4201DB15B00E372B4 /* CanceledCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		CA061E54201D5AAA00FF2A82 /* BaggageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaggageCell.xib; sourceTree = "<group>"; };
 		CA606AE8201D20DD00C58D6A /* UberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UberCell.xib; sourceTree = "<group>"; };
 		CA606AEA201D278800C58D6A /* TerminalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalCell.xib; sourceTree = "<group>"; };
+		CAE9ACD4201DB15B00E372B4 /* CanceledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanceledCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +179,9 @@
 				9D57F3301EDC7AAD0004599F /* DemoCell.swift */,
 				9D57F32E1EDC7A850004599F /* MainTableViewController.swift */,
 				CA606AE8201D20DD00C58D6A /* UberCell.xib */,
-				CA606AEA201D278800C58D6A /* TerminalCell.xib */,
+				CAE9ACD4201DB15B00E372B4 /* CanceledCell.xib */,
 				CA061E50201D3B1B00FF2A82 /* RouteCell.xib */,
+				CA606AEA201D278800C58D6A /* TerminalCell.xib */,
 				CA061E54201D5AAA00FF2A82 /* BaggageCell.xib */,
 				CA061E52201D522B00FF2A82 /* RebookCell.xib */,
 				9D57F3221EDC7A6F0004599F /* Main.storyboard */,
@@ -378,6 +381,7 @@
 				CA061E51201D3B1B00FF2A82 /* RouteCell.xib in Resources */,
 				CA061E53201D522B00FF2A82 /* RebookCell.xib in Resources */,
 				9D57F3261EDC7A6F0004599F /* Assets.xcassets in Resources */,
+				CAE9ACD5201DB15B00E372B4 /* CanceledCell.xib in Resources */,
 				9D57F3241EDC7A6F0004599F /* Main.storyboard in Resources */,
 				CA606AEB201D278800C58D6A /* TerminalCell.xib in Resources */,
 				CA606AE9201D20DD00C58D6A /* UberCell.xib in Resources */,

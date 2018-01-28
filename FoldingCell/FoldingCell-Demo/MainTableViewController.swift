@@ -26,11 +26,13 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     var currentIndex = 0
+    var cellCount = 6
     
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
     let kRowsCount = 10
     var cellHeights: [CGFloat] = []
+    var rebookCellKey = "RouteCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,7 @@ class MainTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "RouteCell", bundle: nil), forCellReuseIdentifier: "RouteCell")
         tableView.register(UINib(nibName: "RebookCell", bundle: nil), forCellReuseIdentifier: "RebookCell")
         tableView.register(UINib(nibName: "BaggageCell", bundle: nil), forCellReuseIdentifier: "BaggageCell")
+        tableView.register(UINib(nibName: "CanceledCell", bundle: nil), forCellReuseIdentifier: "CanceledCell")
 
         cellHeights = Array(repeating: kCloseCellHeight, count: kRowsCount)
         tableView.estimatedRowHeight = kCloseCellHeight
@@ -53,16 +56,63 @@ class MainTableViewController: UITableViewController {
 }
 
 extension MainTableViewController: FoldingCellDelegate {
+    func rebook() {
+        let indexPath = IndexPath(row: currentIndex, section: 0)
+        self.cellCount -= 1
+        self.tableView.deleteRows(at: [indexPath], with: .right)
+        self.cellCount += 1
+        self.rebookCellKey = "RebookCell"
+        self.tableView.insertRows(at: [indexPath], with: .left)
+    }
+    
     func moveToNextCell() {
-
+        let indexPath = IndexPath(row: currentIndex, section: 0)
+        let nextPath = IndexPath(row: currentIndex + 1, section: 0)
+        let curCell = tableView.cellForRow(at: indexPath) as! FoldingCell
+        let nxtCell = tableView.cellForRow(at: nextPath) as! FoldingCell
+        cellHeights[indexPath.row] = kCloseCellHeight
+        cellHeights[indexPath.row + 1] = kOpenCellHeight
+        
+        let container = curCell.foregroundView!
+        let overlay = UIView(frame: container.frame)
+        overlay.clipsToBounds = true
+        overlay.layer.cornerRadius = 10.0
+        overlay.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4911708048)
+        overlay.alpha = 0.0
+        curCell.addSubview(overlay)
+        
+        curCell.unfold(false, animated: true) {
+            UIView.animate(withDuration: 0.5, animations: {
+            }) { (_) in
+                UIView.animate(withDuration: 1.0, animations: {
+                    overlay.alpha = 1.0
+                    self.tableView.beginUpdates()
+                    self.tableView.endUpdates()
+                }, completion: { (_) in
+                    self.currentIndex += 1
+                    let indexPath = IndexPath(row: self.currentIndex, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                    nxtCell.unfold(true, animated: true) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+                            if self.currentIndex == 2 {
+                                self.cellCount -= 1
+                                self.tableView.deleteRows(at: [nextPath], with: .right)
+                                self.cellCount += 1
+                                self.rebookCellKey = "CanceledCell"
+                                self.tableView.insertRows(at: [nextPath], with: .left)
+                            }
+                        })
+                    }
+                })
+            }
+        }
     }
 }
 
 // MARK: - TableView
 extension MainTableViewController {
-
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 6
+        return cellCount
     }
 
     override func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -87,10 +137,8 @@ extension MainTableViewController {
         if indexPath.row == 1 {
            cell = tableView.dequeueReusableCell(withIdentifier: "TerminalCell", for: indexPath) as! FoldingCell
         } else if indexPath.row == 2 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell", for: indexPath) as! FoldingCell
+            cell = tableView.dequeueReusableCell(withIdentifier: rebookCellKey, for: indexPath) as! FoldingCell
         } else if indexPath.row == 3 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "RebookCell", for: indexPath) as! FoldingCell
-        }else if indexPath.row == 4 {
             cell = tableView.dequeueReusableCell(withIdentifier: "BaggageCell", for: indexPath) as! FoldingCell
         } else {
            cell = tableView.dequeueReusableCell(withIdentifier: "UberCell", for: indexPath) as! FoldingCell

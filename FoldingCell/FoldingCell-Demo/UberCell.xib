@@ -306,46 +306,34 @@
                                 </constraints>
                             </view>
                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ue6-xw-sYP" userLabel="BottomContainerView" customClass="RotatedView" customModule="FoldingCell">
-                                <rect key="frame" x="0.0" y="402" width="560" height="72"/>
+                                <rect key="frame" x="0.0" y="390" width="560" height="72"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBo-d3-qvG" userLabel="line">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="10"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioK-YH-1Ma">
-                                                <rect key="frame" x="22" y="0.0" width="516" height="41"/>
-                                                <color key="backgroundColor" red="0.99607843139999996" green="0.74509803919999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="qcX-5Q-bxz"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
-                                                <state key="normal" title="REQUEST">
-                                                    <color key="titleColor" red="0.27058823529999998" green="0.2156862745" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonHandler:" destination="k10-sC-k4d" eventType="touchUpInside" id="2rH-03-YVs"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioK-YH-1Ma">
+                                        <rect key="frame" x="22" y="0.0" width="516" height="60"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.74509803919999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="ioK-YH-1Ma" firstAttribute="centerY" secondItem="fBo-d3-qvG" secondAttribute="centerY" constant="15.5" id="4dN-WD-3q2"/>
-                                            <constraint firstAttribute="trailing" secondItem="ioK-YH-1Ma" secondAttribute="trailing" constant="22" id="gQA-on-cib"/>
-                                            <constraint firstItem="ioK-YH-1Ma" firstAttribute="leading" secondItem="fBo-d3-qvG" secondAttribute="leading" constant="22" id="qmU-dp-Y2c"/>
-                                            <constraint firstAttribute="height" constant="10" id="ugJ-Rz-vgI"/>
+                                            <constraint firstAttribute="height" constant="60" id="qcX-5Q-bxz"/>
                                         </constraints>
-                                    </view>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                        <state key="normal" title="REQUEST">
+                                            <color key="titleColor" red="0.27058823529999998" green="0.2156862745" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonHandler:" destination="k10-sC-k4d" eventType="touchUpInside" id="2rH-03-YVs"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="dCD-zH-wSj"/>
-                                    <constraint firstAttribute="trailing" secondItem="fBo-d3-qvG" secondAttribute="trailing" id="eNh-ig-d6Z"/>
-                                    <constraint firstItem="fBo-d3-qvG" firstAttribute="top" secondItem="Ue6-xw-sYP" secondAttribute="top" id="i1g-Mm-sw7"/>
-                                    <constraint firstItem="fBo-d3-qvG" firstAttribute="leading" secondItem="Ue6-xw-sYP" secondAttribute="leading" id="yZg-wh-LfP"/>
+                                    <constraint firstAttribute="trailing" secondItem="ioK-YH-1Ma" secondAttribute="trailing" constant="22" id="gkb-iV-JxL"/>
+                                    <constraint firstItem="ioK-YH-1Ma" firstAttribute="leading" secondItem="Ue6-xw-sYP" secondAttribute="leading" constant="22" id="ou0-sN-WVJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ioK-YH-1Ma" secondAttribute="bottom" constant="12" id="psW-Xd-J43"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -364,7 +352,7 @@
                             <constraint firstItem="7Nh-21-Hwd" firstAttribute="top" secondItem="g4i-Ru-1sA" secondAttribute="top" constant="165" identifier="yPosition" id="RcZ-bF-fRd"/>
                             <constraint firstAttribute="trailing" secondItem="dW3-TA-jR3" secondAttribute="trailing" id="UqH-qu-xsB"/>
                             <constraint firstAttribute="trailing" secondItem="Ue6-xw-sYP" secondAttribute="trailing" id="Y3R-pg-FRW"/>
-                            <constraint firstItem="Ue6-xw-sYP" firstAttribute="top" secondItem="g4i-Ru-1sA" secondAttribute="top" constant="402" identifier="yPosition" id="ZZy-9J-iuf"/>
+                            <constraint firstItem="Ue6-xw-sYP" firstAttribute="top" secondItem="g4i-Ru-1sA" secondAttribute="top" constant="390" identifier="yPosition" id="ZZy-9J-iuf"/>
                             <constraint firstAttribute="height" constant="479" id="ffA-tJ-S9S"/>
                             <constraint firstItem="Ue6-xw-sYP" firstAttribute="leading" secondItem="g4i-Ru-1sA" secondAttribute="leading" id="ibA-mr-Ybi"/>
                             <constraint firstItem="Wt2-oL-wYo" firstAttribute="leading" secondItem="g4i-Ru-1sA" secondAttribute="leading" id="u52-sx-Ef1"/>

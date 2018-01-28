@@ -11,11 +11,14 @@ import UIKit
 
 protocol FoldingCellDelegate {
     func moveToNextCell()
+    func rebook()
 }
 
 class DemoCell: FoldingCell {
     @IBOutlet var closeNumberLabel: UILabel!
     @IBOutlet var openNumberLabel: UILabel!
+    @IBOutlet var foodView: UIView!
+    @IBOutlet var ticketView: UIView!
     var delegate: FoldingCellDelegate?
 
     var number: Int = 0
@@ -34,6 +37,24 @@ class DemoCell: FoldingCell {
 
 // MARK: - Actions ⚡️
 extension DemoCell {
+    @IBAction func orderFood(_: AnyObject) {
+        UIView.transition(with: containerView, duration: 0.6, options: .transitionFlipFromRight, animations: {
+            self.containerView.insertSubview(self.foodView, aboveSubview: self.ticketView)
+        }, completion: nil)
+    }
+    
+    @IBAction func completeOrder(_: AnyObject) {
+        UIView.transition(with: containerView, duration: 0.6, options: .transitionFlipFromRight, animations: {
+            self.containerView.insertSubview(self.ticketView, aboveSubview: self.foodView)
+        }, completion: nil)
+    }
+    
     @IBAction func buttonHandler(_: AnyObject) {
+        print("tap!")
+        delegate?.moveToNextCell()
+    }
+    
+    @IBAction func rebookFlight(_: AnyObject) {
+        delegate?.rebook()
     }
 }
