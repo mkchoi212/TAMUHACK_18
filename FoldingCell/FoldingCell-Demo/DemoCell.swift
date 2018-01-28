@@ -12,6 +12,7 @@ import UIKit
 protocol FoldingCellDelegate {
     func moveToNextCell()
     func rebook()
+    func updateTable()
 }
 
 class DemoCell: FoldingCell {
@@ -19,6 +20,7 @@ class DemoCell: FoldingCell {
     @IBOutlet var openNumberLabel: UILabel!
     @IBOutlet var foodView: UIView!
     @IBOutlet var ticketView: UIView!
+    
     var delegate: FoldingCellDelegate?
 
     var number: Int = 0
@@ -38,14 +40,16 @@ class DemoCell: FoldingCell {
 // MARK: - Actions ⚡️
 extension DemoCell {
     @IBAction func orderFood(_: AnyObject) {
-        UIView.transition(with: containerView, duration: 0.6, options: .transitionFlipFromRight, animations: {
-            self.containerView.insertSubview(self.foodView, aboveSubview: self.ticketView)
+        UIView.transition(with: containerView, duration: 0.6, options: UIViewAnimationOptions.transitionFlipFromRight, animations: {
+            let ticketView = self.containerView.subviews.filter{ $0.restorationIdentifier == "tickets" }.first!
+            self.containerView.sendSubview(toBack: ticketView)
         }, completion: nil)
     }
     
     @IBAction func completeOrder(_: AnyObject) {
-        UIView.transition(with: containerView, duration: 0.6, options: .transitionFlipFromRight, animations: {
-            self.containerView.insertSubview(self.ticketView, aboveSubview: self.foodView)
+        UIView.transition(with: containerView, duration: 0.6, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: {
+            let foodView =  self.containerView.subviews.filter{ $0.restorationIdentifier == "food" }.first!
+            self.containerView.sendSubview(toBack: foodView)
         }, completion: nil)
     }
     

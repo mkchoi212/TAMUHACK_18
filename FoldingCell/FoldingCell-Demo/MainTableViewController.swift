@@ -56,6 +56,13 @@ class MainTableViewController: UITableViewController {
 }
 
 extension MainTableViewController: FoldingCellDelegate {
+    func updateTable() {
+        UIView.animate(withDuration: 0.1) {
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
+    }
+    
     func rebook() {
         let indexPath = IndexPath(row: currentIndex, section: 0)
         self.cellCount -= 1
@@ -80,6 +87,7 @@ extension MainTableViewController: FoldingCellDelegate {
         overlay.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4911708048)
         overlay.alpha = 0.0
         curCell.addSubview(overlay)
+        currentIndex += 1
         
         curCell.unfold(false, animated: true) {
             UIView.animate(withDuration: 0.5, animations: {
@@ -89,17 +97,17 @@ extension MainTableViewController: FoldingCellDelegate {
                     self.tableView.beginUpdates()
                     self.tableView.endUpdates()
                 }, completion: { (_) in
-                    self.currentIndex += 1
                     let indexPath = IndexPath(row: self.currentIndex, section: 0)
                     self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                     nxtCell.unfold(true, animated: true) {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-                            if self.currentIndex == 2 {
+                            if self.currentIndex == 2 && self.rebookCellKey == "RouteCell" {
+                                let ticketIdx = IndexPath(row: self.currentIndex, section: 0)
                                 self.cellCount -= 1
-                                self.tableView.deleteRows(at: [nextPath], with: .right)
+                                self.tableView.deleteRows(at: [ticketIdx], with: .right)
                                 self.cellCount += 1
                                 self.rebookCellKey = "CanceledCell"
-                                self.tableView.insertRows(at: [nextPath], with: .left)
+                                self.tableView.insertRows(at: [ticketIdx], with: .left)
                             }
                         })
                     }
@@ -143,7 +151,7 @@ extension MainTableViewController {
         } else {
            cell = tableView.dequeueReusableCell(withIdentifier: "UberCell", for: indexPath) as! FoldingCell
         }
-
+        
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
